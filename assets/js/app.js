@@ -63,6 +63,10 @@ app.controller("beFruitController", function ($scope, $http) {
         $scope.subaccion = 'Stock4'; 
     };
     
+    $scope.Stock5 = function () { 
+        $scope.subaccion = 'Stock5'; 
+    };
+    
 
 });
 
