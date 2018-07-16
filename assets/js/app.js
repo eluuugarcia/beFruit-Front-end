@@ -4,12 +4,13 @@ app.controller("beFruitController", function ($scope, $http) {
     $scope.title = "HOLAAAAAAAAAA";
     $scope.accion = 'Inicio'; 
     $scope.subaccion = ''; 
-    
+    $scope.insumos =
     
     //Accion...
     
     $scope.Inicio = function () {
-        $scope.accion = 'Inicio'; 
+        $scope.accion = 'Inicio';
+       
     };
     
     $scope.Venta = function () {
@@ -17,8 +18,9 @@ app.controller("beFruitController", function ($scope, $http) {
     };
     
     $scope.Stock = function () {
-        $scope.accion = 'Stock'; 
-        $scope.subaccion = 'Stock1'; 
+        $scope.accion = 'Stock';
+        $scope.subaccion = 'Stock1';
+        $scope.insumos = $scope.obtenerInsumos()
     };
     
     $scope.Caja = function () {
@@ -46,13 +48,69 @@ app.controller("beFruitController", function ($scope, $http) {
     };
     
     //Subacciones...
+    $scope.obtenerInsumos = function () {
+        var datos = [{ "idInsumo": "1", "nombre": "Diego", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "litros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" }];
+        return datos
+    };
     
-    $scope.Stock1= function () { 
+    $scope.obtenerMovimientos = function() {
+        var datos = [{"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    {"idMovimientos":"1" ,"fecha":"10-08-2017","tipo":"Baja" ,"articulo":"Samasung galaxy s7" ,"cantidad":"50" },
+                    ];
+        return datos
+    };
+    
+
+    $scope.Stock1 = function () { 
         $scope.subaccion = 'Stock1'; 
+       
+        
+        
     };
     
     $scope.Stock2 = function () { 
         $scope.subaccion = 'Stock2'; 
+        $scope.movimientos = $scope.obtenerMovimientos ()
+        
+        
     };
     
     $scope.Stock3 = function () { 
@@ -69,5 +127,3 @@ app.controller("beFruitController", function ($scope, $http) {
     
 
 });
-
-

@@ -12,10 +12,12 @@
 ***********************************************/
 
 .card-heading {
-  border-radius: 0; }
+  border-radius: 10px; }
 
 .card-controls {
   float: right; }
+
+
 
 /***********************************************
 * Colors
@@ -52,9 +54,10 @@ button, input, optgroup, select, textarea {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #EFEFEF;
+  background: white;
   overflow-x: hidden;
-  font-size: 14px; }
+  font-size: 13px;
+}
 
 a {
   -webkit-transition: all 0.1s ease;
@@ -278,7 +281,7 @@ h1, h2, h3, h4, h5, h6,
       padding-right: 0; } }
   .navbar-spark .navbar-nav > li > a:hover,
   .navbar-spark .navbar-nav > li > a:focus {
-    color: #ffffff;
+    color: #9D67AC;
     background-color: transparent; }
   .navbar-spark .navbar-nav > .active > a,
   .navbar-spark .navbar-nav > .active > a:hover,
@@ -474,60 +477,77 @@ body.right-to-left {
 * Sidebar
 ***********************************************/
 .page-sidebar {
-  font-size: 13px; }
+    font-size: 15px;
+    background-color: #f48fb1;
+    height: 39em;
+    border-radius: 15px;
+    width: 16em;
+    position: relative;
+    right: 30px;
+    
+
+}
   .page-sidebar .nav-pills {
     margin: 4px 0; }
   .page-sidebar .nav-pills > li > a {
     background: none;
-    color: #565656;
-    padding: 10px;
+    color: right: ;
+    padding: 5px;
     display: block;
     text-decoration: none;
-    outline: 0; }
-  .page-sidebar .nav-pills > li.active > a,
-  .page-sidebar .nav-pills > li.active > a:focus,
-  .page-sidebar .nav-pills > li.active > a:hover,
-.page-sidebar .nav-pills > li.active > a:hover,
-  .page-sidebar .nav-pills > li > a:focus,
-  .page-sidebar .nav-pills > li > a:hover {
-    color: #000;
-    font-weight:600;
+    outline: 0;
+    color: white
     
-}
+  }
+    .page-sidebar .nav-pills > li.active > a,
+    .page-sidebar .nav-pills > li.active > a:focus,
+    .page-sidebar .nav-pills > li.active > a:hover,
+    .page-sidebar .nav-pills > li.active > a:hover,
+    .page-sidebar .nav-pills > li > a:focus,
+    .page-sidebar .nav-pills > li > a:hover {
+        color: #9575cd;
+        font-weight:1000;
+        font-size: 20px;
+        -webkit-transition: all 0.2s ease;
+        border-bottom: 1px solid #9575cd
+    }
+    
 
  li.active > i.fa {
-    color: #49F057;   
+    color: #9575cd;   
 }
-
+/*
   .page-sidebar i.fa,
   .page-sidebar i.fas {
-    font-size: 24px;
-    vertical-align: -2px;
+    font-size: 30px;
+    vertical-align: -3px;
     text-align: center;
     width: 24px; 
     margin: 0 10px 0 0;
-      color: #34a9eb;
+    color: white;
 }
 
-  .page-sidebar i.fa:hover,
-  .page-sidebar i.fas:hover {
-      color: #ef3c60;
-      font-size: 30px;
-    -webkit-transition: all 0.2s ease;
-}
+    .page-sidebar i.fa:hover,
+    .page-sidebar i.fas:hover,
+    .page-sidebar i.fas.active:hover{
+        color: #9575cd;
+        font-size: 40px;
+        -webkit-transition: all 0.2s ease;
+    }
 
-  .page-sidebar i.fa.active,
-  .page-sidebar i.fas.active {
-      color: #000;
-      font-size: 30px;
-}
+    .page-sidebar i.fa.active,
+    .page-sidebar i.fas.active {
+        color: white;
+        font-size: 35px;
+
+    }*/
 
 
 
 
   .page-sidebar .nav-text {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 25px; }
 
 @media (min-width: 992px) {
   .page-sidebar {
@@ -543,27 +563,43 @@ body.right-to-left {
   display: none; }
 
 .sidebar-collapse {
-  color: #828282;
-  font-size: 30px;
-  height: 40px;
-  padding: 10px 0; }
-  .sidebar-collapse .fa,
-  .sidebar-collapse .ion {
-    cursor: pointer; }
+    color: black;
+    font-size: 10px;
+    height: 40px;
+    font-weight:bold;
+    padding: 10px 0;
+}
+    .sidebar-collapse .fa,
+    .sidebar-collapse .ion {
+        cursor: pointer;
+        -webkit-transition: all .9s ease;
+    }
 
 .collapsed .sidebar-collapse .show-on-collapsed,
 .sidebar-collapse .hide-on-collapsed {
-  display: inline-block; }
+  display: inline-block;
+  padding: 10px}
 
 .collapsed .sidebar-collapse .hide-on-collapsed,
 .sidebar-collapse .show-on-collapsed {
-  display: none; }
+  display: none;
+}
 
 .sidebar-collapse .hide-on-collapsed {
-  float: right; }
+  float: right;
+    cursor: pointer;
+    margin: 0;
+}
 
 .sidebar-collapse .show-on-collapsed {
-  float: left; }
+  float: left; 
+cursor: pointer;
+margin: 0px;
+}
+
+.collapsed .page-sidebar {
+    width: 10px:
+} 
 
 .right-to-left .collapsed .sidebar-collapse .show-on-collapsed,
 .right-to-left .sidebar-collapse .hide-on-collapsed {
@@ -571,13 +607,15 @@ body.right-to-left {
 
 .right-to-left .collapsed .sidebar-collapse .hide-on-collapsed,
 .right-to-left .sidebar-collapse .show-on-collapsed {
-  display: inline-block; }
+  display: inline-block; 
+    }
 
 .page-body.collapsed .page-sidebar .nav-pills.collapse.show {
-  display: none !important; }
+    display: none !important;}
 
 .page-body.collapsed .page-sidebar .dropdown-toggle:after {
   display: none; }
+
 
 /***********************************************
 * Sidebar > Toggle
@@ -789,16 +827,17 @@ body.right-to-left {
   background: #203A45;
   border-radius: 3px;
   padding: 8px 16px; }
-  .gmaps-overlay .arrow {
-    left: 50%;
-    margin-left: -16px;
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: -15px;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
-    border-top: 16px solid #203A45; }
+    .gmaps-overlay .arrow {
+        left: 50%;
+        margin-left: -16px;
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -15px;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-top: 16px solid transparent;
+    }
 
 /***********************************************
 * Jvectormap
@@ -807,22 +846,13 @@ body.right-to-left {
 /***********************************************
 * Widgets
 ***********************************************/
-.widget-minify,
-.widget-close {
-  margin: 0 2px;
-  color: #9B9B9B; }
-  .widget-minify:hover, .widget-minify:focus,
-  .widget-close:hover,
-  .widget-close:focus {
-    color: #686868; }
-
 .widget {
   background: #fff;
   margin: 80px 0 0 40px;
   position: relative;
   z-index: 1;
   border: none;
-  border-radius: 0; }
+  border-radius: 10px; }
   .widget > .card-heading {
     padding: 26px;
     border: 0;
@@ -908,7 +938,13 @@ body.right-to-left {
 
 .logo {
     margin: -10px 0 0 0;
+    width:120px;
+    height: auto;
+    position: relative;
+    top: 10px;
+    
 }
+
 
 .ait {
     margin: 0 0 0 350px;
@@ -923,9 +959,10 @@ body.right-to-left {
 
 .contact li{
     color: rgb(127, 136, 143);
-    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    border-bottom-color 0.2s ease-in-out;
     text-decoration: none;
-    padding: 10px 0 0 20px;
+    padding: 12px 0 0 20px;
     left: 20px;
     display: inline-block;
     
@@ -1013,4 +1050,81 @@ ul.contact li:before {
 
 .nav-tabs {
     margin: -40px 0 0 0;
+}
+
+.tab, .btn, .btn-large, .btn-small {
+    background-color: #ab47bc;
+}
+nav {
+    background-color: #f48fb1 ;
+}
+
+nav.nav-extended div.container-fluid {
+    height: auto;
+}
+
+/*Esto es para que la card este alineada al div de la cabecera.*/
+
+div.row div.col-12,
+div.row div.col-12 div.card,
+div.row div.col-md-12,
+div.row div.col-md-12 div.card
+ {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 1.2em;
+    
+}
+
+div.page-content{
+    margin-top: 10px;
+
+}
+#dropdown1{
+   top: -28px; 
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.dropdown-content li > a {
+    color: #9575cd;
+    
+}
+
+
+/*Prueba Amrnado Paredes*/
+.dropdown-trigger {
+    width: 200px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #9575cd;
+    border-radius: 10px
+        
+}
+
+.dropdown-trigger:hover{
+    color: white;
+   
+}
+ 
+.dropdown-trigger:visited{
+    background-color: #9575cd
+}
+
+div.row div.col-md-12 div.card div.card-body,
+div.row div.col-12 div.card div.card-body
+{
+    height: 41em;
+}
+
+footer div.row{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a.nav-link {
+    position: relative;
+    left: 20px;
 }

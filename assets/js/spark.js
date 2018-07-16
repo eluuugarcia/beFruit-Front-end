@@ -48,44 +48,26 @@ var Spark = {
     });
     },
 
- //crea los iconos y le da funcionalidad al minimizar y cerrar pantalla.
-  //**Le decimos pantalla al rectangulo blanco que va cambiando segun el icono que se acciona.
-  createWidgets: function() {
-
-    $('.widget-minify').on('click', function(e){
-      e.preventDefault();
-      $(this).closest('.widget').toggleClass('collapsed');
-      $(this).find('i').toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
-    });
-
-    $('.widget-close').on('click', function(e){
-      e.preventDefault();
-      $(this).closest('.widget').hide();
-    });
-    },
-
-  //no entiendo que hace.
-  callOnResize: [],
-  handleElementsOnResizing: function() {
-    var resizing;
-    $(window).resize(function() {
-      if (resizing) {
-        clearTimeout(resizing);
-      }
-      resizing = setTimeout(function() {
-        for (var i = 0; i < Spark.callOnResize.length; i++) {
-          Spark.callOnResize[i].call();
-        }
-      }, 300);
-    });
-    },
-
+  //callOnResize: [],
+  //handleElementsOnResizing: function() {
+  //  var resizing;
+  //  $(window).resize(function() {
+  //    if (resizing) {
+  //      clearTimeout(resizing);
+  //    }
+  //    resizing = setTimeout(function() {
+  //      for (var i = 0; i < Spark.callOnResize.length; i++) {
+  //        Spark.callOnResize[i].call();
+  //      }
+  //    }, 300);
+  //  });
+  //  },
+    
   init: function(){
     this.removeNoJs();
     this.removeLoadingScreen();
     this.animateWidgetsAfterPageLoad();
     this.createSidebar();
-    this.createWidgets();
-    this.handleElementsOnResizing();
+    //this.handleElementsOnResizing();
   }
 }
