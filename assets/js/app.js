@@ -140,8 +140,9 @@ app.controller("beFruitController", function ($scope, $http) {
         
     
     $scope.Stock4 = function () { 
-        $scope.subaccion = 'Stock4'; 
-        $scope.nvoInsumo = {};
+        $scope.subaccion = 'Stock4';
+        if ($scope.nvoInsumo == null) { $scope.nvoInsumo = {}; }
+        
         //$scope.ObtenerUnMed();
         
         $scope.unidadesmedida = $scope.ListaUnMed();
@@ -162,6 +163,10 @@ app.controller("beFruitController", function ($scope, $http) {
                 $scope.Stock1();
             });
         }
+    };
+    $scope.BuscarPorId = function (Insumo) {
+        $scope.nvoInsumo = Insumo;
+        $scope.Stock4();
     };
     
     $scope.Stock5 = function () { 

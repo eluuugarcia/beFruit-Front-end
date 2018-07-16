@@ -186,7 +186,9 @@
                                                                         <td>{{i.nombre}}</td>
                                                                         <td>{{i.cantidadStock}}</td>
                                                                         <td>{{i.stockMinimo}}</td>
-                                                                        <td>{{i.UnidadMedida}}</td>
+                                                                         <td>{{i.UnidadMedida}}</td>
+                                                                       <td><a ng-click="BuscarPorId(i)" href="#"><i class="material-icons">build</i></a></td>
+                                                                        <td ><a ng-click="Stock4()" href="#"><i class="fas fa-trash-alt"></i></a></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -227,6 +229,7 @@
                                                                         <td>
                                                                             <buttton type="button" class="btn btn-danger" style="border-radius: 5px"><i class="fas fa-trash-alt"></i></buttton>
                                                                         </td>
+                                                                          
                                                                     </tr>
 
 
@@ -295,44 +298,43 @@
                                                             </div>-->
                                                             </div>
 
-                                                            <div class="row">
-                                                                <div class="input-field col s4">
-                                                                    <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre">
-                                                                    <label for="nombre">Nombre del insumo</label>
-                                                                </div>
+                                                                                                        <div class="row">
+                                                                                                            
+                                                                                                            <div class="input-field col s4">
+                                                                                                                <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre">
+                                                                                                                <label for="nombre">Nombre del insumo</label>
+                                                                                                            </div>
 
-                                                                <div class="input-field col s2">
-                                                                    <input id="stockMin" type="number" class="validate" ng-model="nvoInsumo.stMin">
-                                                                    <label for="stockMin">
-                                                                        Stock Minimo
-                                                                    </label>
-                                                                </div>
-                                                                <div class="input-field col s2">
+                                                                                                            <div class="input-field col s2">
+                                                                                                                <input id="stockMinimo" type="text" class="validate" ng-model="nvoInsumo.stockMinimo">
+                                                                                                                <label for="stockMinimo">
+                                                                                                                    Stock Minimo
+                                                                                                                </label>
+                                                                                                            </div>
+                                                                                                            <div class="input-field col s2">
 
-                                                                    <!--<select ng-model="selectedName" ng-options="x.nombre for x in ListaUnMed"></select>-->
+                                                                                                                <!--<select ng-model="selectedName" ng-options="x.nombre for x in ListaUnMed"></select>-->
+                                                                                                                <!--<select ng-model="seleccionado">
+            <option ng-repeat="x in unidadesmedida" value="{{x.id}}">{{x.nombre}}</option>
+        </select>-->
 
+                                                                                                                <select>
+                                                                                                                    <option value="1">te22xt</option>
+                                                                                                                    <option value="2">te34222xt</option>
+                                                                                                                    <option value="1">34244324</option>
+                                                                                                                </select>
+                                                                                                                <label>Unidad de medida</label>
+                                                                                                            </div>
 
-                                                                    <!--<select ng-model="seleccionado">
-                                                                        <option ng-repeat="x in unidadesmedida" value="{{x.id}}">{{x.nombre}}</option>
-                                                                    </select>-->
-
-                                                                    <select>
-                                                                        <option value="1">te22xt</option>
-                                                                        <option value="2">te34222xt</option>
-                                                                        <option value="1">34244324</option>
-                                                                    </select>
-                                                                    <label>Unidad de medida</label>
-                                                                </div>
-
-                                                                <div class="input-field col s4">
-                                                                    <input id="cantidad" type="number" class="validate" ng-model="nvoInsumo.cant">
-                                                                    <label for="cantidad">Cantidad a agregar</label>
-                                                                </div>
-                                                            </div>
+                                                                                                            <div class="input-field col s4">
+                                                                                                                <input id="cantidadStock" type="text" class="validate" ng-model="nvoInsumo.cantidadStock">
+                                                                                                                <label for="cantidadStock" >Cantidad a agregar</label>
+                                                                                                            </div>
+                                                                                                        </div>
 
                                                             <div class="row">
                                                                 <div class="col s12">
-                                                                    <a class="waves-effect waves-light btn-large  white-text">Listo!</a>
+                                                                    <a class="waves-effect waves-light btn-large  white-text" ng-click="Grabar()" >Listo!</a>
                                                                 </div>
                                                             </div>
 
