@@ -191,8 +191,14 @@
                                                             </table>
                                                         </div>
                                                     </div>
-                                                    <a class="btn-float  btn-large waves-effect waves-light white-text " ng-click="Stock4()" title="¿Agergar Articulo???"><i class="material-icons">add</i></a>
-                                                </div>
+                                                    <div class="row">
+                                                        <a class=" btn-large waves-effect waves-light white-text " ng-click="Stock4()" title="¿Agergar Articulo???"><i class="material-icons">add</i></a>
+                                                        <div class="offset col 3">
+                                                            <a class="  btn-large waves-effect waves-light white-text tooltipped"  data-position="bottom" data-tooltip="Envia informe de stock bajo" href="#"><i class="material-icons">mail</i></a>
+
+                                                        </div> 
+                                                           </div>
+                                                     </div>
 
                                             </div>
                                             <div class="tab-content" ng-show="subaccion == 'Stock2'">
@@ -289,21 +295,26 @@
 
                                                             <div class="row">
                                                                 <div class="input-field col s4">
-                                                                    <input id="nombre" type="text" class="validate">
+                                                                    <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre">
                                                                     <label for="nombre">Nombre del insumo</label>
                                                                 </div>
 
-                                                                <div class="input-field col s4">
-                                                                    <select class="icons">
-                                                                    <option value="" disabled selected>Elige tu opción!</option>
-                                                                    <option value="" data-icon="../assets/img/996124_661381537289844_1084828522044584598_n.jpg">Consumible</option>
-                                                                    <option value="" data-icon="../assets/img/996860_461286873965979_342246660_n.jpg">Descartable</option>
-                                                                    <option value="" data-icon="../assets/img/10559749_676355165792481_4514393383212587095_n.jpg">Otros</option>
-                                                                </select>
-                                                                    <label>Tipo de insumo</label>
+                                                                <div class="input-field col s2">
+                                                                    <input id="stockMin" type="number" class="validate" ng-model="nvoInsumo.stMin">
+                                                                    <label for="stockMin">
+                                                                        Stock Minimo
+                                                                    </label>
                                                                 </div>
+                                                                <div class="input-field col s2">
+                                                                    <select ng-model="nvoInsumo.unMed">
+                                                                        <option selected ng-repeat="um in unidadesmedida" value="{{um.id}}">{{um.nombre}}</option>
+                                                                        
+                                                                    </select>
+                                                                    <label>Unidad de medida</label>
+                                                                </div>
+
                                                                 <div class="input-field col s4">
-                                                                    <input id="cantidad" type="number" class="validate">
+                                                                    <input id="cantidad" type="number" class="validate" ng-model="nvoInsumo.cant">
                                                                     <label for="cantidad">Cantidad a agregar</label>
                                                                 </div>
                                                             </div>

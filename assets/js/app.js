@@ -97,14 +97,35 @@ app.controller("beFruitController", function ($scope, $http) {
                     ];
         return datos
     };
-    
+    $scope.ObtenerInsumos1 = function () {
+        var datos = [{ "id": "5", "nombre" : "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" },
+        ];
+        return datos
+    };
+    //$scope.ObtenerUnMed = function () {
+    //    $http.get('/unidadMedida')
+    //        .then(function (response) {
+    //            $scope.insumos = response.data; 
+    //};
+
+
 
     $scope.Stock1 = function () { 
         $scope.subaccion = 'Stock1'; 
-       
-        
         
     };
+
+    $scope.Agregar = function () {
+                 // iniciar objeto vacio;
+            };
     
     $scope.Stock2 = function () { 
         $scope.subaccion = 'Stock2'; 
@@ -115,7 +136,12 @@ app.controller("beFruitController", function ($scope, $http) {
     
     $scope.Stock3 = function () { 
         $scope.subaccion = 'Stock3'; 
-    };
+        $scope.nvoInsumo = {};
+        //$scope.ObtenerUnMed();
+        $scope.unidadesmedida = $scope.ObtenerInsumos1();
+        };
+
+        
     
     $scope.Stock4 = function () { 
         $scope.subaccion = 'Stock4'; 
