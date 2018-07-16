@@ -97,16 +97,16 @@ app.controller("beFruitController", function ($scope, $http) {
                     ];
         return datos
     };
-    $scope.ObtenerInsumos1 = function () {
+    $scope.ListaUnMed = function () {
         var datos = [{ "id": "5", "nombre" : "litros" },
+            { "id": "3", "nombre": "litros" },
             { "id": "5", "nombre": "litros" },
             { "id": "5", "nombre": "litros" },
             { "id": "5", "nombre": "litros" },
             { "id": "5", "nombre": "litros" },
             { "id": "5", "nombre": "litros" },
             { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
+            { "id": "5", "nombre": "litros" }
         ];
         return datos
     };
@@ -123,9 +123,7 @@ app.controller("beFruitController", function ($scope, $http) {
         
     };
 
-    $scope.Agregar = function () {
-                 // iniciar objeto vacio;
-            };
+   
     
     $scope.Stock2 = function () { 
         $scope.subaccion = 'Stock2'; 
@@ -136,15 +134,34 @@ app.controller("beFruitController", function ($scope, $http) {
     
     $scope.Stock3 = function () { 
         $scope.subaccion = 'Stock3'; 
-        $scope.nvoInsumo = {};
-        //$scope.ObtenerUnMed();
-        $scope.unidadesmedida = $scope.ObtenerInsumos1();
+       
         };
 
         
     
     $scope.Stock4 = function () { 
         $scope.subaccion = 'Stock4'; 
+        $scope.nvoInsumo = {};
+        //$scope.ObtenerUnMed();
+        
+        $scope.unidadesmedida = $scope.ListaUnMed();
+    };
+
+    $scope.Grabar = function () {
+        if ($scope.nvoInsumo.Id == undefined)  // agregar
+        {
+            $http.post('/application/json', $scope.nvoInsumo).then(function (response) {
+                alert("Registro agregado correctamente.");
+                $scope.Stock1();
+                
+            });
+        }
+        else {
+            $http.put('/' + $scope.nvoInsumo.IdArticulo, $scope.nvoInsumo).then(function (response) {
+                alert("Registro modificado correctamente.");
+                $scope.Stock1();
+            });
+        }
     };
     
     $scope.Stock5 = function () { 

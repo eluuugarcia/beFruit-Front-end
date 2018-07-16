@@ -115,6 +115,7 @@
                                     <div class="card-body">
                                         <h3>Habría que pensar qué poner aca...</h3>
                                         {{title}}
+                                        {{ListaUnMed.datos}}
 
 
                                     </div>
@@ -280,17 +281,18 @@
 
                                             <div class="tab-content" ng-show="subaccion == 'Stock4'">
                                                 <div role="tabcard" class="tab-pane fade in active show">
+                                                 
                                                     <div class="row">
                                                         <form class="col s12">
-                                                            <div class="row">
-                                                                <!--<div class="input-field col s6">
-                    <input id="id_insumo" type="number" class="validate">
-                    <label for="id_insumo"> Id del insumo </label>
-                </div>-->
-                                                                <!--<div class="input-field col s12">
-                    <input id="nombre" type="text" class="validate">
-                    <label for="nombre">Nombre del insumo</label>
-                </div>-->
+                                                                                                        <div class="row">
+                                                                                                            <!--<div class="input-field col s6">
+                                                                <input id="id_insumo" type="number" class="validate">
+                                                                <label for="id_insumo"> Id del insumo </label>
+                                                            </div>-->
+                                                                                                            <!--<div class="input-field col s12">
+                                                                <input id="nombre" type="text" class="validate">
+                                                                <label for="nombre">Nombre del insumo</label>
+                                                            </div>-->
                                                             </div>
 
                                                             <div class="row">
@@ -306,9 +308,18 @@
                                                                     </label>
                                                                 </div>
                                                                 <div class="input-field col s2">
-                                                                    <select ng-model="nvoInsumo.unMed">
-                                                                        <option selected ng-repeat="um in unidadesmedida" value="{{um.id}}">{{um.nombre}}</option>
-                                                                        
+
+                                                                    <!--<select ng-model="selectedName" ng-options="x.nombre for x in ListaUnMed"></select>-->
+
+
+                                                                    <!--<select ng-model="seleccionado">
+                                                                        <option ng-repeat="x in unidadesmedida" value="{{x.id}}">{{x.nombre}}</option>
+                                                                    </select>-->
+
+                                                                    <select>
+                                                                        <option value="1">te22xt</option>
+                                                                        <option value="2">te34222xt</option>
+                                                                        <option value="1">34244324</option>
                                                                     </select>
                                                                     <label>Unidad de medida</label>
                                                                 </div>
