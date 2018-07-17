@@ -324,6 +324,7 @@
                                                                                                                 <input id="cantidadStock" type="text" class="validate" ng-model="nvoInsumo.cantidadStock">
                                                                                                                 <label for="cantidadStock" >Cantidad a agregar</label>
                                                                                                             </div>
+                                                                                                            
                                                                                                         </div>
 
                                                             <div class="row">
@@ -339,10 +340,35 @@
                                             </div>
                                             <div class="tab-content" ng-show="subaccion == 'Stock5'">
                                                 <div role="tabcard" class="tab-pane fade in active show">
-                                                    <p>Ver unidades de medida cargadas(gramos, litros, etc), deberia poder modificarlas y agregar una nueva. Pantalla para admins.</p>
-                                                    <br>
-                                                    <br>
-                                                    <br>
+                                                     <div role="tabcard" class="tab-pane fade in active show">
+                                                 
+                                                    <div class="row">
+                                                        <form class="col s12">
+
+                                                          <div class="row">
+                                                              
+                                                              <div class="input-field col s4">
+                                                                  <input id="idUm" type="text" class="validate" ng-model="nvoUm.id">
+                                                                  <label for="Nº">Id</label>
+                                                              </div>
+                                                              <div class="input-field col s2">
+                                                                  <input id="NombreUM" type="text" class="validate" ng-model="nvoUm.Nombre">
+                                                                  <label for="Nombre">
+                                                                      Nombre
+                                                                  </label>
+                                                              </div>
+                                                                                                            
+                                                          </div>
+
+                                                            <div class="row">
+                                                                <div class="col s12">
+                                                                    <a class="waves-effect waves-light btn-large  white-text" ng-click="Grabar()" >Listo!</a>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
 
