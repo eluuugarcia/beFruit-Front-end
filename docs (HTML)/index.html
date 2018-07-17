@@ -152,7 +152,7 @@
                                                 <li role="presentation" class="nav-item" ng-click="Stock3()">
                                                     <a href="" role="tab" data-toggle="tab" class="nav-link" aria-selected="false">Nuevo movimiento</a>
                                                 </li>
-                                                <li role="presentation" class="nav-item" ng-click="Stock4()">
+                                                <li role="presentation" class="nav-item" ng-click="Agregar()">
                                                     <a href="" role="tab" data-toggle="tab" class="nav-link" aria-selected="false">Insumos</a>
                                                 </li>
                                                 <li role="presentation" class="nav-item" ng-click="Stock5()">
@@ -177,6 +177,7 @@
                                                                         <th>Cantidad Stock</th>
                                                                         <th>Stock Minimo</th>
                                                                         <th>Unidad Medida</th>
+                                                                        <th colspan="2">Acciones</th>
                                                                     </tr>
                                                                 </thead>
 
@@ -188,14 +189,14 @@
                                                                         <td>{{i.stockMinimo}}</td>
                                                                          <td>{{i.UnidadMedida}}</td>
                                                                        <td><a ng-click="BuscarPorId(i)" href="#"><i class="material-icons">build</i></a></td>
-                                                                        <td ><a ng-click="Stock4()" href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                                                        <td ><a ng-click="Borrar()" href="#"><i class="fas fa-trash-alt"></i></a></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <a class=" btn-large waves-effect waves-light white-text " ng-click="Stock4()" title="¿Agergar Articulo???"><i class="material-icons">add</i></a>
+                                                        <a class=" btn-large waves-effect waves-light white-text " ng-click="Agregar()" title="¿Agergar Articulo???"><i class="material-icons">add</i></a>
                                                         <div class="offset col 3">
                                                             <a class="  btn-large waves-effect waves-light white-text tooltipped"  data-position="bottom" data-tooltip="Envia informe de stock bajo" href="#"><i class="material-icons">mail</i></a>
 
@@ -301,7 +302,7 @@
                                                                                                         <div class="row">
                                                                                                             
                                                                                                             <div class="input-field col s4">
-                                                                                                                <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre">
+                                                                                                                <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre" placeholder="{{nvoInsumo ? 'nvoInsumo.nombre' : '' }}">
                                                                                                                 <label for="nombre">Nombre del insumo</label>
                                                                                                             </div>
 

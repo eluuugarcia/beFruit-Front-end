@@ -135,7 +135,6 @@ app.controller("beFruitController", function ($scope, $http) {
     
     $scope.Stock4 = function () { 
         $scope.subaccion = 'Stock4';
-        if ($scope.nvoInsumo == null) { $scope.nvoInsumo = {}; }
         
         //$scope.ObtenerUnMed();
         
@@ -148,16 +147,34 @@ app.controller("beFruitController", function ($scope, $http) {
             $http.post('/application/json', $scope.nvoInsumo).then(function (response) {
                 alert("Registro agregado correctamente.");
                 $scope.Stock1();
+                $scope.nvoInsumo = null;
                 
             });
         }
         else {
-            $http.put('/' + $scope.nvoInsumo.IdArticulo, $scope.nvoInsumo).then(function (response) {
+            $http.put('/' + $scope.nvoInsumo.idInsumo, $scope.nvoInsumo).then(function (response) {
                 alert("Registro modificado correctamente.");
                 $scope.Stock1();
+                $scope.nvoInsumo = null;
             });
         }
     };
+
+    $scope.Agregar = function () {
+        $scope.nvoInsumo = {};
+        $scope.Stock4();
+    };
+    $scope.Borrar = function () {
+     
+        $http.put('/' + $scope.nvoInsumo.idInsumo, $scope.nvoInsumo).then(function (response) {
+            
+                alert("Registro eliminado")
+            });
+        
+    };
+
+ 
+
     $scope.BuscarPorId = function (Insumo) {
         $scope.nvoInsumo = Insumo;
         $scope.Stock4();
