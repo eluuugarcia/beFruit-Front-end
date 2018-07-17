@@ -312,16 +312,10 @@
                                                                                                                 </label>
                                                                                                             </div>
                                                                                                             <div class="input-field col s2">
-
-                                                                                                                <!--<select ng-model="selectedName" ng-options="x.nombre for x in ListaUnMed"></select>-->
-                                                                                                                <!--<select ng-model="seleccionado">
-            <option ng-repeat="x in unidadesmedida" value="{{x.id}}">{{x.nombre}}</option>
-        </select>-->
-
                                                                                                                 <select>
-                                                                                                                    <option value="1">te22xt</option>
-                                                                                                                    <option value="2">te34222xt</option>
-                                                                                                                    <option value="1">34244324</option>
+                                                                                                                    <option ng-repeat="option in obtenerUnidadMedida" value="{{option.id}}">
+                                                                                                                        {{option.name}}
+                                                                                                                    </option>
                                                                                                                 </select>
                                                                                                                 <label>Unidad de medida</label>
                                                                                                             </div>

@@ -97,19 +97,12 @@ app.controller("beFruitController", function ($scope, $http) {
                     ];
         return datos
     };
-    $scope.ListaUnMed = function () {
-        var datos = [{ "id": "5", "nombre" : "litros" },
-            { "id": "3", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" },
-            { "id": "5", "nombre": "litros" }
-        ];
-        return datos
-    };
+
+    $scope.obtenerUnidadMedida = [
+        { "id": "1", "name": "Juli" },
+        { "id": "2", name: "Diego" },
+    ];
+
     //$scope.ObtenerUnMed = function () {
     //    $http.get('/unidadMedida')
     //        .then(function (response) {
