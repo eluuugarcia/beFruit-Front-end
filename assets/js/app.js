@@ -71,6 +71,7 @@ app.controller("beFruitController", function ($scope, $http) {
             { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
             { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
             { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
+            { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" },
             { "idInsumo": "1", "nombre": "juli", "cantidadStock": "10", "stockMinimo": "5", "UnidadMedida": "lmetros" }];
         return datos
     };
