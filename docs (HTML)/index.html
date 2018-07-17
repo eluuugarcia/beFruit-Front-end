@@ -302,19 +302,19 @@
                                                                                                         <div class="row">
                                                                                                             
                                                                                                             <div class="input-field col s4">
-                                                                                                                <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre" placeholder="{{nvoInsumo ? 'nvoInsumo.nombre' : '' }}">
+                                                                                                                <input id="nombre" type="text" class="validate" ng-model="nvoInsumo.nombre" placeholder="{{nvoInsumo.idInsumo == null ? '' : 'nvoInsumo.nombre' }}">
                                                                                                                 <label for="nombre">Nombre del insumo</label>
                                                                                                             </div>
 
                                                                                                             <div class="input-field col s2">
-                                                                                                                <input id="stockMinimo" type="text" class="validate" ng-model="nvoInsumo.stockMinimo">
+                                                                                                                <input id="stockMinimo" type="text" class="validate" placeholder="{{nvoInsumo.idInsumo == null ? '' : 'nvoInsumo.stockMinimo' }}" ng-model="nvoInsumo.stockMinimo">
                                                                                                                 <label for="stockMinimo">
                                                                                                                     Stock Minimo
                                                                                                                 </label>
                                                                                                             </div>
                                                                                                             <div class="input-field col s2">
                                                                                                                 <select>
-                                                                                                                    <option ng-repeat="option in obtenerUnidadMedida" value="{{option.id}}">
+                                                                                                                    <option ng-model="nvoInsumo.UnidadMedida" ng-repeat="option in obtenerUnidadMedida" placeholder="{{nvoInsumo.idInsumo == null ? '' : 'nvoInsumo.UnidadMedida' }}" value="{{option.id}}">
                                                                                                                         {{option.name}}
                                                                                                                     </option>
                                                                                                                 </select>
@@ -322,7 +322,7 @@
                                                                                                             </div>
 
                                                                                                             <div class="input-field col s4">
-                                                                                                                <input id="cantidadStock" type="text" class="validate" ng-model="nvoInsumo.cantidadStock">
+                                                                                                                <input id="cantidadStock" type="text" class="validate" ng-model="nvoInsumo.cantidadStock" placeholder="{{nvoInsumo.idInsumo == null ? '' : 'nvoInsumo.cantidadStock' }}">
                                                                                                                 <label for="cantidadStock" >Cantidad a agregar</label>
                                                                                                             </div>
                                                                                                             
@@ -330,7 +330,7 @@
 
                                                             <div class="row">
                                                                 <div class="col s12">
-                                                                    <a class="waves-effect waves-light btn-large  white-text" ng-click="Grabar()" >Listo!</a>
+                                                                    <a class="waves-effect waves-light btn-large  white-text" ng-click="Grabar()" >{{ nvoInsumo.idInsumo == null ? 'Guardar nuevo!' : 'Guardar cambios!'}}</a>
                                                                 </div>
                                                             </div>
 

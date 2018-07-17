@@ -166,7 +166,7 @@ app.controller("beFruitController", function ($scope, $http) {
     };
     $scope.Borrar = function () {
      
-        $http.put('/' + $scope.nvoInsumo.idInsumo, $scope.nvoInsumo).then(function (response) {
+        $http.put('/' + $scope.nvoInsumo.idInsumo, $scope.nvoInsumotoJson).then(function (response) {
             
                 alert("Registro eliminado")
             });
