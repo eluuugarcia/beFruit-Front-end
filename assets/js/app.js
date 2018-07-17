@@ -100,8 +100,8 @@ app.controller("beFruitController", function ($scope, $http) {
     };
 
     $scope.obtenerUnidadMedida = [
-        { "id": "1", "name": "Juli" },
-        { "id": "2", name: "Diego" },
+        { "id": "1", "nombre": "Juli" },
+        { "id": "2", "nombre": "Diego" },
     ];
 
     //$scope.ObtenerUnMed = function () {
@@ -179,9 +179,14 @@ app.controller("beFruitController", function ($scope, $http) {
         $scope.nvoInsumo = Insumo;
         $scope.Stock4();
     };
+
+    $scope.BuscarUmPorId = function (unidadMedida) {
+        $scope.nvoUnidad = unidadMedida;
+    };
     
     $scope.Stock5 = function () { 
-        $scope.subaccion = 'Stock5'; 
+        $scope.subaccion = 'Stock5';
+        $scope.unidadesMedida = $scope.obtenerUnidadMedida
     };
     
 

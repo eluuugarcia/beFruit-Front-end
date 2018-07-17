@@ -341,36 +341,64 @@
                                             </div>
                                             <div class="tab-content" ng-show="subaccion == 'Stock5'">
                                                 <div role="tabcard" class="tab-pane fade in active show">
-                                                     <div role="tabcard" class="tab-pane fade in active show">
-                                                 
-                                                    <div class="row">
-                                                        <form class="col s12">
+                                                    <div role="tabcard" class="tab-pane fade in active show">
+                                                        <div class="container " style="height: 450px">
 
-                                                          <div class="row">
-                                                              
-                                                              <div class="input-field col s4">
-                                                                  <input id="idUm" type="text" class="validate" ng-model="nvoUm.id">
-                                                                  <label for="Nº">Id</label>
-                                                              </div>
-                                                              <div class="input-field col s2">
-                                                                  <input id="NombreUM" type="text" class="validate" ng-model="nvoUm.Nombre">
-                                                                  <label for="Nombre">
-                                                                      Nombre
-                                                                  </label>
-                                                              </div>
-                                                                                                            
-                                                          </div>
+                                                            <div class="container " style="float: left; width: 40%">
+                                                                    <table class="table col-sm-2">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <td>Nº</td>
+                                                                                <td>Nombre</td>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody ng-repeat="um in unidadesMedida">
+                                                                            <tr>
+                                                                                <td>{{um.id}}</td>
+                                                                                <td>{{um.nombre}}</td>
+                                                                                <td><a ng-click="BuscarUmPorId(um)" href="#"><i class="material-icons">build</i></a></td>
+                                                                                <td><a ng-click="Borrar()" href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                                                            </tr>
 
-                                                            <div class="row">
-                                                                <div class="col s12">
-                                                                    <a class="waves-effect waves-light btn-large  white-text" ng-click="Grabar()" >Listo!</a>
-                                                                </div>
+                                                                        </tbody>
+                                                                    </table>
+
                                                             </div>
 
+                                                            <div class="container " style="float: right; width: 60%; overflow: auto; height: 400px; text-align: center; border-left: 1px solid grey">
+                                                                <form class="col s12">
 
-                                                        </form>
+                                                                    <div class="row">
+
+                                                                        <div class="input-field col col-sm-5">
+                                                                            <input id="idUm" type="text" class="validate" ng-model="nvoUm.id"  >
+                                                                            <label for="Nº">Id</label>
+                                                                        </div>
+                                                                        <div class="input-field col col-sm-5" >
+                                                                            <input id="NombreUM" type="text" class="validate" ng-model="nvoUm.Nombre">
+                                                                            <label for="Nombre">
+                                                                                Nombre
+                                                                            </label>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </form>
+</div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            
+
+                                                                <div class="row">
+                                                                    <div class="col s12">
+                                                                        <a class="waves-effect waves-light btn-large  white-text" ng-click="Grabar()">Listo!</a>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                             </div>
 
 
