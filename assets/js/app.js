@@ -108,8 +108,8 @@ app.controller("stockController", function ($scope, $http) {
                 "cantidadStock": "10",
                 "stockMinimo": "5",
                 "UnidadMedida": {"nombre": "unidad"}
-            }];*/
-        return datos;
+            }];
+        return datos;*/
         $http.get('/beFruit/stock/insumo')
             .then (function (response){
                 return response.data;
@@ -353,4 +353,22 @@ app.controller("franquiciasController", function ($scope, $http) {
 
     //Funciones...
 
+});
+
+app.controller("ventaController", function ($scope, $http) {
+});
+
+app.controller("cajaController", function ($scope, $http) {
+});
+
+app.controller("empleadosController", function ($scope, $http) {
+});
+
+app.controller("informesController", function ($scope, $http) {
+});
+
+app.controller("promocionesController", function ($scope, $http) {
+});
+
+app.controller("configController", function ($scope, $http) {
 });
